@@ -13,7 +13,7 @@ function getWeather() {
   document.getElementById("loadingSpinner").style.display = "block";
 
   fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
   )
     .then((response) => {
       if (!response.ok) {
