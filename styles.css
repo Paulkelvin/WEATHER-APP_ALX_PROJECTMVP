@@ -128,3 +128,9 @@ button:hover {
 .fa-wind {
   color: #808080;
 }
+
+#temperature {
+  font-size: 2rem;
+  display: block;
+  margin: auto;
+}
