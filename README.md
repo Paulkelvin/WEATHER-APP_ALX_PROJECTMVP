@@ -33,6 +33,11 @@ A simple, responsive, and visually appealing weather app that provides current w
 2. Navigate to the project directory
 3. Open `index.html` in your preferred browser.
 
+## Live Demo
+
+Experience the application in action. Click [here](https://paulkelvin.github.io/WEATHER-APP_ALX_PROJECTMVP/) to view the live demo.
+
+
 ## Usage
 
 1. Enter a city name in the input field.
