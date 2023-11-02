@@ -1,3 +1,11 @@
+document
+  .getElementById("cityInput")
+  .addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+      getWeather();
+    }
+  });
+
 const API_KEY = "a1871a7d447e53399787d4132ebd3545";
 
 function getWeather() {
