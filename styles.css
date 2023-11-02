@@ -1,0 +1,130 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.app {
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+
+.weather-info {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.weather-info.visible {
+  opacity: 1;
+  display: block;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+#weatherIcon {
+  font-size: 50px;
+  margin: 20px 0;
+}
+
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  animation: moveBackground 10s infinite alternate;
+}
+
+@keyframes moveBackground {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+input[type="text"] {
+  display: block;
+
+  padding: 8px 10px;
+  margin: 15px auto;
+  border: 2px solid #007bff;
+  border-radius: 50px;
+  font-size: 18px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #0056b3;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.spinner {
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 8px solid #007bff;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.fa-thermometer-half {
+  color: #ffa500;
+}
+
+.fa-tint {
+  color: #1e90ff;
+}
+
+.fa-wind {
+  color: #808080;
+}
