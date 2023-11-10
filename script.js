@@ -85,3 +85,12 @@ function getWeather() {
       alert("Failed to fetch weather data. Please try again.");
     });
 }
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
