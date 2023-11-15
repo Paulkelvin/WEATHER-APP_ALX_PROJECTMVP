@@ -96,7 +96,7 @@ For the next iteration, I plan to integrate a feature for weather forecasting, a
 
 ## Visuals and Demos
 
-![Main Interface](#main-interface-url)
+![Main Interface](#https://github.com/Paulkelvin/WEATHER-APP_ALX_PROJECTMVP/blob/main/weatherAuraDesktop.PNG)
 _A glimpse of the WeatherAura interface on a desktop._
 
 ![Responsive Design](#https://github.com/Paulkelvin/WEATHER-APP_ALX_PROJECTMVP/blob/main/Screenshot_20231102_123226_Chrome.jpg)
