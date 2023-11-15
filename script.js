@@ -1,3 +1,4 @@
+// Add an event listener to the city input field to trigger the getWeather function on pressing Enter
 document
   .getElementById("cityInput")
   .addEventListener("keyup", function (event) {
@@ -6,12 +7,15 @@ document
     }
   });
 
+// API key for accessing the OpenWeatherMap API
 const API_KEY = "a1871a7d447e53399787d4132ebd3545";
 
+// Function to fetch weather data for the entered city
 function getWeather() {
   const city = document.getElementById("cityInput").value;
   document.getElementById("loadingSpinner").style.display = "block";
 
+  // Fetch weather data from the API
   fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
   )
@@ -22,6 +26,7 @@ function getWeather() {
       return response.json();
     })
     .then((data) => {
+      // Update the webpage with the fetched weather details
       const bodyElement = document.body;
       document.getElementById("cityName").innerText = data.name;
       document.getElementById("temperature").innerText = `${data.main.temp}°C`;
@@ -80,12 +85,14 @@ function getWeather() {
       weatherInfo.classList.add("visible");
     })
 
+    // Handle errors in fetching weather data
     .catch((error) => {
       console.error("Error fetching weather data:", error);
       alert("Failed to fetch weather data. Please try again.");
     });
 }
 
+// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
